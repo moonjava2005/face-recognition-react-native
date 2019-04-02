@@ -1,7 +1,7 @@
 {
   "name": "face-recognition-react-native",
-  "version": "0.0.4",
-  "description": "Detect faces from image",
+  "version": "0.0.5",
+  "description": "Simple detect faces from image",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

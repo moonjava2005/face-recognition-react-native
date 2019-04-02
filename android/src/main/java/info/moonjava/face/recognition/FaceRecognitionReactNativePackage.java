@@ -1,5 +1,5 @@
 
-package io.brickgame.face.recognition;
+package info.moonjava.face.recognition;
 
 import java.util.Arrays;
 import java.util.Collections;

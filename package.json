@@ -1,0 +1,34 @@
+{
+  "name": "face-recognition-react-native",
+  "version": "0.0.1",
+  "description": "Detect faces from image",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "MoonJava",
+    "email": "moonjava@gmail.com"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "ios",
+    "android",
+    "face",
+    "detect",
+    "recognize",
+    "recognition"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": ">=0.50.0",
+    "react-native-gesture-handler": "^1.1.0"
+  },
+  "homepage": "https://github.com/moonjava2005/face-recognition-react-native",
+  "readme": "https://github.com/moonjava2005/face-recognition-react-native#readme",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/moonjava2005/face-recognition-react-native.git"
+  }
+}

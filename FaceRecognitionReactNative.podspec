@@ -7,15 +7,13 @@ Pod::Spec.new do |s|
   s.description  = package['description']
   s.homepage     = package['homepage']
   s.license      = package['license']
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author             = package['author']
   s.platform     = :ios, "9.0"
   s.source       = { :git => "git://github.com/moonjava2005/face-recognition-react-native.git", :tag => s.version }
-  s.source_files  = "FaceRecognitionReactNative/**/*.{h,m}"
+  s.source_files  = "ios/**/*.{h,m}"
   s.requires_arc = true
-
-
   s.dependency 'React'
+  s.dependency 'Firebase/Core'
   s.dependency 'Firebase/MLVision'
   s.dependency 'Firebase/MLVisionFaceModel'
 

@@ -1,6 +1,6 @@
 {
   "name": "face-recognition-react-native",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Detect faces from image",
   "main": "index.js",
   "scripts": {

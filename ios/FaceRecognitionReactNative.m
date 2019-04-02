@@ -1,7 +1,7 @@
 
 #import "FaceRecognitionReactNative.h"
 #import <UIKit/UIKit.h>
-@import Firebase;
+#import <Firebase/Firebase.h>
 
 #define ERROR_CANNOT_PROCESS_IMAGE_KEY @"E_CANNOT_PROCESS_IMAGE"
 #define ERROR_CANNOT_PROCESS_IMAGE_MSG @"Cannot read this image"

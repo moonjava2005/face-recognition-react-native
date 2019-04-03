@@ -62,6 +62,7 @@ public class FaceRecognitionReactNativeModule extends ReactContextBaseJavaModule
                     detector.detectInImage(image)
                             .addOnSuccessListener(
                                     faces -> {
+                                        WritableMap resultMap = new WritableNativeMap();
                                         if (faces != null && faces.size() > 0) {
                                             WritableArray resultFaces = new WritableNativeArray();
                                             for (FirebaseVisionFace face : faces) {
@@ -79,11 +80,9 @@ public class FaceRecognitionReactNativeModule extends ReactContextBaseJavaModule
                                                 faceMap.putDouble("eulerZ", eulerZ);
                                                 resultFaces.pushMap(faceMap);
                                             }
-                                            promise.resolve(resultFaces);
-
-                                        } else {
-                                            promise.resolve(null);
+                                            resultMap.putArray("faces", resultFaces);
                                         }
+                                        promise.resolve(resultMap);
                                     })
                             .addOnFailureListener(
                                     e -> {

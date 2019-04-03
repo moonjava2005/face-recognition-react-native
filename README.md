@@ -50,12 +50,14 @@ detectFaces(imageUrl:string).then(result => {
 ```
 
 ### Result Info
+* faces: Array of detected face infos
+
+### Face Info
 * rect: Rectangle of face.
 * eulerY: A face with a positive Euler Y angle is turned to the camera's right and to its left.
 * eulerZ: A face with a positive Euler Z angle is rotated counter-clockwise relative to the camera.
 
 ### Rect Info
-
 * x
 * y
 * width

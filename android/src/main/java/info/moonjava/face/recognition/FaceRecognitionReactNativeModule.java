@@ -22,6 +22,7 @@ import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetector;
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetectorOptions;
 
 import java.io.InputStream;
+import java.net.URL;
 import java.util.List;
 
 public class FaceRecognitionReactNativeModule extends ReactContextBaseJavaModule {
@@ -46,8 +47,13 @@ public class FaceRecognitionReactNativeModule extends ReactContextBaseJavaModule
     @ReactMethod
     public void detectFaces(final String imageUrl, final Promise promise) {
         try {
-            Uri uri = Uri.parse(imageUrl);
-            InputStream image_stream = reactContext.getContentResolver().openInputStream(uri);
+            InputStream image_stream;
+            if (imageUrl.startsWith("http://") || imageUrl.startsWith("https://")) {
+                image_stream = new URL(imageUrl).openStream();
+            } else {
+                Uri uri = Uri.parse(imageUrl);
+                image_stream = reactContext.getContentResolver().openInputStream(uri);
+            }
             Bitmap bitmap = BitmapFactory.decodeStream(image_stream);
             FirebaseVisionFaceDetectorOptions options =
                     new FirebaseVisionFaceDetectorOptions.Builder()
